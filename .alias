@@ -1,0 +1,13 @@
+#!/bin/zsh
+alias alias_reload='source ~/.alias'
+alias ll='LC_ALL="C" ls -lha'
+alias make='make -j9 --no-print-directory'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ssh='ssh -Y'
+alias xdg='xdg-open 2>/dev/null'
+alias xfig='xfig -imperial -specialtext -latexfonts -startfontsize 11 -startgridmode 2 -dontallownegcoords -dontshowdepthmanager -dontshowpageborder -showlengths -nosplash'
+alias cd='cd -P'
+alias vscode='cp -n ~/local/misc/vscode-tasks.json .vscode/tasks.json; tmux display-message -p "#S:#I" | install /dev/stdin .vscode/target 2> /dev/null; code'
+alias emacs='emacs -nw'
+alias update-alternatives='update-alternatives --altdir ~/local/alternatives --admindir ~/local/alternatives/admin'

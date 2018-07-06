@@ -1,0 +1,20 @@
+.PHONY: all
+
+V ?= 0
+
+all: build/build.ninja
+ifeq ($(V),1)
+	@cd build && ninja -v
+else
+	@cd build && ninja
+endif
+
+build:
+	mkdir build
+
+build/build.ninja: build
+	@echo "Configure"
+	@cd build && cmake -GNinja . ..
+
+clean:
+	rm -fr build
